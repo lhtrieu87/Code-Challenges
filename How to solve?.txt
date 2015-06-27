@@ -1,3 +1,4 @@
 1. Brute force, slowly optimize
 2. Pre-condition(s) & Post-conditions
 3. Find a similar problem, if more constraints are provided, there should be a simpler answer. (Vanya & Scales vs. Snapsack)
+4. Pay attention into mathematical equation(s) (Happy Line)
