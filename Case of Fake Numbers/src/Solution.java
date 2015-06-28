@@ -1,14 +1,6 @@
 import java.util.Scanner;
 
 public class Solution {
-	private static int clockwise(int i, int N) {
-		return (i + 1) % N;
-	}
-
-	private static int counterClockwise(int i, int N) {
-		return (i - 1 + N) % N;
-	}
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int N = scanner.nextInt();
