@@ -49,13 +49,31 @@ public class Algo {
 		return foundPositions;
 	}
 
+	private static List<Integer> bruteForce(String a, String b) {
+		List<Integer> foundPositions = new LinkedList<Integer>();
+		for (int i = 0; i <= a.length() - b.length(); i++) {
+			for (int j = 0; j < b.length(); j++) {
+				if (a.charAt(i + j) != b.charAt(j)) {
+					break;
+				}
+
+				if (j == b.length() - 1) {
+					foundPositions.add(i);
+				}
+			}
+		}
+
+		return foundPositions;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String a = scanner.nextLine();
 		String b = scanner.nextLine();
 
 		int[] fTable = buildFailureTable(b);
-		List<Integer> foundPositions = search(a, b, fTable);
+		// List<Integer> foundPositions = search(a, b, fTable);
+		List<Integer> foundPositions = bruteForce(a, b);
 
 		if (foundPositions.size() == 0) {
 			System.out.println(-1);
