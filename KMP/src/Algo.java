@@ -57,9 +57,12 @@ public class Algo {
 		int[] fTable = buildFailureTable(b);
 		List<Integer> foundPositions = search(a, b, fTable);
 
-		for (int i = 0; i < foundPositions.size(); i++) {
-			System.out.println(foundPositions.get(i));
-		}
+		if (foundPositions.size() == 0) {
+			System.out.println(-1);
+		} else
+			for (int i = 0; i < foundPositions.size(); i++) {
+				System.out.println(foundPositions.get(i));
+			}
 
 		scanner.close();
 	}
